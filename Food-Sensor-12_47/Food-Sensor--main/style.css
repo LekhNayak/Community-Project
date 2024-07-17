@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* Ensure content is above the background */
+  }
+
+  .container::before {
+    content: "";
+    background: url("download.jpg") no-repeat center center/cover;
+    position: absolute;
+    background-size: 45%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1; /* Adjust this value to change the opacity */
+    z-index: -1; /* Ensure background is behind the content */
+  }
